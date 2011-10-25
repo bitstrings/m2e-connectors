@@ -17,13 +17,13 @@
     <parent>
         <groupId>org.bitstrings.eclipse.m2e.connectors.xmlbeans</groupId>
         <artifactId>parent</artifactId>
-        <version>1.0.4-SNAPSHOT</version>
+        <version>2.0-SNAPSHOT</version>
     </parent>
 
     <artifactId>org.bitstrings.eclipse.m2e.connectors.xmlbeans</artifactId>
 
     <packaging>eclipse-plugin</packaging>
 
-    <name>m2e :: Connectors :: XmlBeans :: Connector</name>
+    <name>m2e Connectors :: XmlBeans :: Connector</name>
 
 </project>
