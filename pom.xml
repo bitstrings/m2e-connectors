@@ -21,7 +21,7 @@
     </parent>
 
     <groupId>org.bitstrings.eclipse.m2e.connectors</groupId>
-    <artifactId>m2e-connectors-parent</artifactId>
+    <artifactId>parent</artifactId>
     <version>2.0-SNAPSHOT</version>
 
     <name>m2e Connectors :: Parent</name>
@@ -67,6 +67,11 @@
             <url>http://download.eclipse.org/releases/indigo</url>
         </repository>
     </repositories>
+
+    <modules>
+      <module>jaxb2-m2e-connector</module>
+      <module>xmlbeans-m2e-connector</module>
+    </modules>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
