@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.bitstrings.eclipse.m2e.connectors.jaxb2.tests</groupId>
+    <artifactId>jvnet-generate-test</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+
+    <packaging>jar</packaging>
+
+    <name>Test Project</name>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.jvnet.jaxb2.maven2</groupId>
+                <artifactId>${maven-jaxb2-plugin.name}</artifactId>
+                <version>${maven-jaxb2-plugin.version}</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>generate</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>2.3.2</version>
+                <configuration>
+                    <source>1.5</source>
+                    <target>1.5</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <profiles>
+        <profile>
+            <id>jaxb2-plugin</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <maven-jaxb2-plugin.name>maven-jaxb2-plugin</maven-jaxb2-plugin.name>
+            </properties>
+        </profile>
+        <profile>
+            <id>jaxb20-plugin</id>
+            <properties>
+                <maven-jaxb2-plugin.name>maven-jaxb20-plugin</maven-jaxb2-plugin.name>
+            </properties>
+        </profile>
+        <profile>
+            <id>jaxb21-plugin</id>
+            <properties>
+                <maven-jaxb2-plugin.name>maven-jaxb21-plugin</maven-jaxb2-plugin.name>
+            </properties>
+        </profile>
+        <profile>
+            <id>jaxb22-plugin</id>
+            <properties>
+                <maven-jaxb2-plugin.name>maven-jaxb22-plugin</maven-jaxb2-plugin.name>
+            </properties>
+        </profile>
+        <profile>
+            <id>jaxb2-version-0.7.4</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <maven-jaxb2-plugin.version>0.7.4</maven-jaxb2-plugin.version>
+            </properties>
+        </profile>
+        <profile>
+            <id>jaxb2-version-0.7.5</id>
+            <properties>
+                <maven-jaxb2-plugin.version>0.7.5</maven-jaxb2-plugin.version>
+            </properties>
+        </profile>
+        <profile>
+            <id>jaxb2-version-0.8.0</id>
+            <properties>
+                <maven-jaxb2-plugin.version>0.8.0</maven-jaxb2-plugin.version>
+            </properties>
+        </profile>
+    </profiles>
+
+</project>

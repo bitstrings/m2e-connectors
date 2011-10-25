@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<lifecycleMappingMetadata>
+
+    <pluginExecutions>
+        <pluginExecution>
+            <pluginExecutionFilter>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>xmlbeans-maven-plugin</artifactId>
+                <versionRange>[2.3.3,)</versionRange>
+                <goals>
+                    <goal>xmlbeans</goal>
+                    <goal>xmlbeans-test</goal>
+                </goals>
+            </pluginExecutionFilter>
+            <action>
+                <configurator>
+                    <id>org.bitstrings.eclipse.m2e.connectors.xmlbeans.xmlbeansConfigurator</id>
+                </configurator>
+            </action>
+        </pluginExecution>
+    </pluginExecutions>
+
+</lifecycleMappingMetadata>

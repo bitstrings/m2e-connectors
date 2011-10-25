@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<lifecycleMappingMetadata>
+
+    <pluginExecutions>
+        <!-- org.jvnet.jaxb2.maven2 -->
+        <pluginExecution>
+            <pluginExecutionFilter>
+                <groupId>org.jvnet.jaxb2.maven2</groupId>
+                <artifactId>maven-jaxb2-plugin</artifactId>
+                <versionRange>[0.7.3,)</versionRange>
+                <goals>
+                    <goal>generate</goal>
+                </goals>
+            </pluginExecutionFilter>
+            <action>
+                <configurator>
+                    <id>org.bitstrings.eclipse.m2e.connectors.jaxb2.jvnet.Jaxb2GenerateConfigurator</id>
+                </configurator>
+            </action>
+        </pluginExecution>
+        <pluginExecution>
+            <pluginExecutionFilter>
+                <groupId>org.jvnet.jaxb2.maven2</groupId>
+                <artifactId>maven-jaxb20-plugin</artifactId>
+                <versionRange>[0.7.5,)</versionRange>
+                <goals>
+                    <goal>generate</goal>
+                </goals>
+            </pluginExecutionFilter>
+            <action>
+                <configurator>
+                    <id>org.bitstrings.eclipse.m2e.connectors.jaxb2.jvnet.Jaxb2GenerateConfigurator</id>
+                </configurator>
+            </action>
+        </pluginExecution>
+        <pluginExecution>
+            <pluginExecutionFilter>
+                <groupId>org.jvnet.jaxb2.maven2</groupId>
+                <artifactId>maven-jaxb21-plugin</artifactId>
+                <versionRange>[0.7.5,)</versionRange>
+                <goals>
+                    <goal>generate</goal>
+                </goals>
+            </pluginExecutionFilter>
+            <action>
+                <configurator>
+                    <id>org.bitstrings.eclipse.m2e.connectors.jaxb2.jvnet.Jaxb2GenerateConfigurator</id>
+                </configurator>
+            </action>
+        </pluginExecution>
+        <pluginExecution>
+            <pluginExecutionFilter>
+                <groupId>org.jvnet.jaxb2.maven2</groupId>
+                <artifactId>maven-jaxb22-plugin</artifactId>
+                <versionRange>[0.7.5,)</versionRange>
+                <goals>
+                    <goal>generate</goal>
+                </goals>
+            </pluginExecutionFilter>
+            <action>
+                <configurator>
+                    <id>org.bitstrings.eclipse.m2e.connectors.jaxb2.jvnet.Jaxb2GenerateConfigurator</id>
+                </configurator>
+            </action>
+        </pluginExecution>
+
+        <!-- org.codehaus.mojo -->
+        <pluginExecution>
+            <pluginExecutionFilter>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>jaxb2-maven-plugin</artifactId>
+                <versionRange>[1.2,)</versionRange>
+                <goals>
+                    <goal>xjc</goal>
+                    <goal>testXjc</goal>
+                </goals>
+            </pluginExecutionFilter>
+            <action>
+                <configurator>
+                    <id>org.bitstrings.eclipse.m2e.connectors.jaxb2.codehaus.Jaxb2XjcConfigurator</id>
+                </configurator>
+            </action>
+        </pluginExecution>
+        <pluginExecution>
+            <pluginExecutionFilter>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>jaxb2-maven-plugin</artifactId>
+                <versionRange>[1.3,)</versionRange>
+                <goals>
+                    <goal>schemagen</goal>
+                    <goal>testSchemagen</goal>
+                </goals>
+            </pluginExecutionFilter>
+            <action>
+                <configurator>
+                    <id>org.bitstrings.eclipse.m2e.connectors.jaxb2.codehaus.Jaxb2SchemagenConfigurator</id>
+                </configurator>
+            </action>
+        </pluginExecution>
+    </pluginExecutions>
+
+</lifecycleMappingMetadata>
