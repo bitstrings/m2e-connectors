@@ -59,6 +59,7 @@
     <modules>
         <module>jaxb2-m2e-connector</module>
         <module>xmlbeans-m2e-connector</module>
+        <module>eclipse-repository</module>
     </modules>
 
 </project>
