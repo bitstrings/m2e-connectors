@@ -10,6 +10,7 @@
  */
 package org.bitstrings.eclipse.m2e.connectors.xmlbeans;
 
+import org.bitstrings.eclipse.m2e.common.JavaProjectUtils;
 import org.eclipse.core.resources.IProject;
 import org.eclipse.core.resources.IResource;
 import org.eclipse.core.resources.IncrementalProjectBuilder;
@@ -34,7 +35,9 @@ public class XmlBeansGenerationTest extends AbstractMavenProjectTestCase
 
         IClasspathEntry[] cp = JavaCore.create(project).getRawClasspath();
 
-        assertEquals(new Path("/test/target/generated-sources/xmlbeans"), cp[4].getPath());
+        assertTrue(
+                JavaProjectUtils.containsPath(
+                        new Path("/test/target/generated-sources/xmlbeans"), cp));
 
         assertTrue(
                 project

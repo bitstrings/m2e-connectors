@@ -10,6 +10,7 @@
  */
 package org.bitstrings.eclipse.m2e.connectors.jaxb2.codehaus;
 
+import org.bitstrings.eclipse.m2e.common.JavaProjectUtils;
 import org.eclipse.core.resources.IProject;
 import org.eclipse.core.resources.IResource;
 import org.eclipse.core.resources.IncrementalProjectBuilder;
@@ -110,7 +111,9 @@ public class Jaxb2XjcTest extends AbstractMavenProjectTestCase
 
         IClasspathEntry[] cp = JavaCore.create(project).getRawClasspath();
 
-        assertEquals(new Path("/codehaus-xjc-test/target/generated-sources/jaxb"), cp[4].getPath());
+        assertTrue(
+                JavaProjectUtils.containsPath(
+                        new Path("/codehaus-xjc-test/target/generated-sources/jaxb"), cp));
 
         return project;
     }
