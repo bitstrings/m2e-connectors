@@ -29,7 +29,7 @@ public class Jaxb2XjcBuildParticipant extends MojoExecutionBuildParticipant
 {
     public Jaxb2XjcBuildParticipant(MojoExecution execution)
     {
-        super(execution, true);
+        super(execution, true, true);
     }
 
     @Override
