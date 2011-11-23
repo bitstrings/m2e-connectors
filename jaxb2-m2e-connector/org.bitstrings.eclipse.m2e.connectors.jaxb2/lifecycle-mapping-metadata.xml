@@ -14,6 +14,10 @@
                 </goals>
             </pluginExecutionFilter>
             <action>
+                <execute>
+                  <runOnIncremental>true</runOnIncremental>
+                  <runOnConfiguration>true</runOnConfiguration>
+                </execute>
                 <configurator>
                     <id>org.bitstrings.eclipse.m2e.connectors.jaxb2.jvnet.Jaxb2GenerateConfigurator</id>
                 </configurator>
@@ -29,6 +33,10 @@
                 </goals>
             </pluginExecutionFilter>
             <action>
+                <execute>
+                  <runOnIncremental>true</runOnIncremental>
+                  <runOnConfiguration>true</runOnConfiguration>
+                </execute>
                 <configurator>
                     <id>org.bitstrings.eclipse.m2e.connectors.jaxb2.jvnet.Jaxb2GenerateConfigurator</id>
                 </configurator>
@@ -44,6 +52,10 @@
                 </goals>
             </pluginExecutionFilter>
             <action>
+                <execute>
+                  <runOnIncremental>true</runOnIncremental>
+                  <runOnConfiguration>true</runOnConfiguration>
+                </execute>
                 <configurator>
                     <id>org.bitstrings.eclipse.m2e.connectors.jaxb2.jvnet.Jaxb2GenerateConfigurator</id>
                 </configurator>
@@ -59,6 +71,10 @@
                 </goals>
             </pluginExecutionFilter>
             <action>
+                <execute>
+                  <runOnIncremental>true</runOnIncremental>
+                  <runOnConfiguration>true</runOnConfiguration>
+                </execute>
                 <configurator>
                     <id>org.bitstrings.eclipse.m2e.connectors.jaxb2.jvnet.Jaxb2GenerateConfigurator</id>
                 </configurator>
@@ -77,6 +93,10 @@
                 </goals>
             </pluginExecutionFilter>
             <action>
+                <execute>
+                  <runOnIncremental>true</runOnIncremental>
+                  <runOnConfiguration>true</runOnConfiguration>
+                </execute>
                 <configurator>
                     <id>org.bitstrings.eclipse.m2e.connectors.jaxb2.codehaus.Jaxb2XjcConfigurator</id>
                 </configurator>
@@ -93,6 +113,10 @@
                 </goals>
             </pluginExecutionFilter>
             <action>
+                <execute>
+                  <runOnIncremental>true</runOnIncremental>
+                  <runOnConfiguration>true</runOnConfiguration>
+                </execute>
                 <configurator>
                     <id>org.bitstrings.eclipse.m2e.connectors.jaxb2.codehaus.Jaxb2SchemagenConfigurator</id>
                 </configurator>
