@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<lifecycleMappingMetadata>
+
+    <pluginExecutions>
+        <pluginExecution>
+            <pluginExecutionFilter>
+                <groupId>org.bitstrings.maven.plugins</groupId>
+                <artifactId>dependencypath-maven-plugin</artifactId>
+                <versionRange>[1.0.0,)</versionRange>
+                <goals>
+                    <goal>set</goal>
+                </goals>
+            </pluginExecutionFilter>
+            <action>
+                <execute>
+                  <runOnIncremental>false</runOnIncremental>
+                  <runOnConfiguration>true</runOnConfiguration>
+                </execute>
+                <configurator>
+                    <id>org.bitstrings.eclipse.m2e.connectors.dependencypath.dependencypathConfigurator</id>
+                </configurator>
+            </action>
+        </pluginExecution>
+    </pluginExecutions>
+
+</lifecycleMappingMetadata>
