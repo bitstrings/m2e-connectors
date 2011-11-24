@@ -5,7 +5,7 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.bitstrings.eclipse.m2e.connectors.xmlbeans.tests</groupId>
+    <groupId>org.bitstrings.eclipse.m2e.connectors.dependencypath.tests</groupId>
     <artifactId>test</artifactId>
     <version>0.0.1-SNAPSHOT</version>
 
@@ -15,9 +15,17 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <dependencypath.version>1.0.1</dependencypath.version>
     </properties>
 
     <build>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -34,13 +42,13 @@
                 <version>2.5</version>
             </plugin>
             <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>xmlbeans-maven-plugin</artifactId>
-                <version>2.3.3</version>
+                <groupId>org.bitstrings.maven.plugins</groupId>
+                <artifactId>dependencypath-maven-plugin</artifactId>
+                <version>${dependencypath.version}</version>
                 <executions>
                     <execution>
                         <goals>
-                            <goal>xmlbeans</goal>
+                            <goal>set</goal>
                         </goals>
                     </execution>
                 </executions>
@@ -50,9 +58,9 @@
 
     <dependencies>
         <dependency>
-            <groupId>org.apache.xmlbeans</groupId>
-            <artifactId>xmlbeans</artifactId>
-            <version>2.4.0</version>
+            <groupId>org.bitstrings.maven.plugins</groupId>
+            <artifactId>dependencypath-maven-plugin</artifactId>
+            <version>${dependencypath.version}</version>
         </dependency>
     </dependencies>
 

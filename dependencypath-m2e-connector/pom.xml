@@ -30,7 +30,7 @@
     <modules>
         <module>org.bitstrings.eclipse.m2e.connectors.dependencypath</module>
         <module>org.bitstrings.eclipse.m2e.connectors.dependencypath.feature</module>
-        <!-- <module>org.bitstrings.eclipse.m2e.connectors.dependencypath.tests</module> -->
+        <module>org.bitstrings.eclipse.m2e.connectors.dependencypath.tests</module>
     </modules>
 
 </project>
