@@ -10,6 +10,7 @@
  */
 package org.bitstrings.eclipse.m2e.connectors.jaxb2.jvnet;
 
+import org.bitstrings.eclipse.m2e.common.JavaProjectUtils;
 import org.eclipse.core.resources.IProject;
 import org.eclipse.core.resources.IResource;
 import org.eclipse.core.resources.IncrementalProjectBuilder;
@@ -85,7 +86,9 @@ public class Jaxb2GenerateTest extends AbstractMavenProjectTestCase
 
         IClasspathEntry[] cp = JavaCore.create(project).getRawClasspath();
 
-        assertEquals(new Path("/jvnet-generate-test/target/generated-sources/xjc"), cp[5].getPath());
+        assertTrue(
+                JavaProjectUtils.containsPath(
+                                new Path("/jvnet-generate-test/target/generated-sources/xjc"), cp));
 
         assertTrue(
                 project
