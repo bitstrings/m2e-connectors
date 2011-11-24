@@ -15,11 +15,8 @@
             <action>
                 <execute>
                   <runOnIncremental>false</runOnIncremental>
-                  <runOnConfiguration>true</runOnConfiguration>
+                  <runOnConfiguration>false</runOnConfiguration>
                 </execute>
-                <configurator>
-                    <id>org.bitstrings.eclipse.m2e.connectors.dependencypath.dependencypathConfigurator</id>
-                </configurator>
             </action>
         </pluginExecution>
     </pluginExecutions>

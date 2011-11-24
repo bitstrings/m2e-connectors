@@ -17,7 +17,7 @@
       provider-name="bitstrings.org">
 
    <description url="">
-m2e connector for dependencypath
+m2e connector for dependencypath-maven-plugin
    </description>
 
    <copyright>

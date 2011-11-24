@@ -13,13 +13,6 @@
  -->
 <plugin>
 
-   <extension point="org.eclipse.m2e.core.projectConfigurators">
-      <configurator
-            class="org.bitstrings.eclipse.m2e.connectors.dependencypath.DependencyPathProjectConfigurator"
-            id="org.bitstrings.eclipse.m2e.connectors.dependencypath.dependencypathConfigurator"
-            name="Dependency Path Connector Configurator"/>
-   </extension>
-
    <extension point="org.eclipse.m2e.core.lifecycleMappingMetadataSource"/>
 
 </plugin>
