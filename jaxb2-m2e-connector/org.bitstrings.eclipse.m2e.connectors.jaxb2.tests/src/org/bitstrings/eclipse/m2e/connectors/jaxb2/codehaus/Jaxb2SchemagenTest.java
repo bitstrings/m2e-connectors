@@ -15,7 +15,7 @@ import javax.xml.xpath.XPath;
 import javax.xml.xpath.XPathConstants;
 import javax.xml.xpath.XPathFactory;
 
-import org.bitstrings.eclipse.m2e.common.JavaProjectUtils;
+import org.bitstrings.eclipse.m2e.common.JavaProjectHelper;
 import org.eclipse.core.resources.IProject;
 import org.eclipse.core.resources.IResource;
 import org.eclipse.core.resources.IncrementalProjectBuilder;
@@ -104,7 +104,7 @@ public class Jaxb2SchemagenTest extends AbstractMavenProjectTestCase
         IClasspathEntry[] cp = JavaCore.create(project).getRawClasspath();
 
         assertTrue(
-                JavaProjectUtils.containsPath(
+                JavaProjectHelper.containsPath(
                                 new Path("/codehaus-schemagen-test/target/generated-resources/schemagen"), cp));
 
         assertTrue(
