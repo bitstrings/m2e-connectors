@@ -15,7 +15,7 @@
             <action>
                 <execute>
                   <runOnIncremental>true</runOnIncremental>
-                  <runOnConfiguration>true</runOnConfiguration>
+                  <runOnConfiguration>false</runOnConfiguration>
                 </execute>
             </action>
         </pluginExecution>

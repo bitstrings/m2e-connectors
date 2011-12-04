@@ -28,7 +28,7 @@ public class XmlBeansBuildParticipant extends MojoExecutionBuildParticipant
 {
     public XmlBeansBuildParticipant(MojoExecution execution)
     {
-        super(execution, true, true);
+        super(execution, true);
     }
 
     @Override

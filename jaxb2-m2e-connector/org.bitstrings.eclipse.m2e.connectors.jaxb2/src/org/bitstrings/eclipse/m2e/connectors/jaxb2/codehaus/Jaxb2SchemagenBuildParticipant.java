@@ -28,7 +28,7 @@ public class Jaxb2SchemagenBuildParticipant extends MojoExecutionBuildParticipan
 {
     public Jaxb2SchemagenBuildParticipant(MojoExecution execution)
     {
-        super(execution, true, true);
+        super(execution, true);
     }
 
     @Override
