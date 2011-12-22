@@ -39,24 +39,12 @@ public class XmlBeansBuildParticipant extends MojoExecutionBuildParticipant
         final MavenSession mavenSession = getSession();
         final MojoExecution mojoExecution = getMojoExecution();
 
-        boolean filesModified =
-                    !ArrayUtils.isEmpty(
-                            BuildHelper.getModifiedFiles(
-                                            mavenSession, mojoExecution,
-                                            maven, buildContext,
-                                            "schemaDirectory"));
 
-        if (!filesModified)
-        {
-            filesModified =
-                !ArrayUtils.isEmpty(
-                            BuildHelper.getModifiedFiles(
-                                            mavenSession, mojoExecution,
-                                            maven, buildContext,
-                                            "bindingDirectory"));
-        }
-
-        if (!filesModified)
+        if (ArrayUtils.isEmpty(
+                    BuildHelper.getModifiedFiles(
+                                    mavenSession, mojoExecution,
+                                    maven, buildContext,
+                                    "schemaDirectory")))
         {
             return null;
         }
@@ -84,6 +72,18 @@ public class XmlBeansBuildParticipant extends MojoExecutionBuildParticipant
         {
             buildContext.refresh(generated);
         }
+
+        generated =
+                maven.getMojoParameterValue(
+                        getSession(),
+                        getMojoExecution(),
+                        "staleFile",
+                        File.class);
+        if (generated != null)
+        {
+            buildContext.refresh(generated);
+        }
+
 
         return result;
     }
