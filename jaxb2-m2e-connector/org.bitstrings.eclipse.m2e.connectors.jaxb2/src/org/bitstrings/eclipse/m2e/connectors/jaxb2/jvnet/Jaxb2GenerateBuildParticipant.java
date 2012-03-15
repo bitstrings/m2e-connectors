@@ -46,7 +46,7 @@ public class Jaxb2GenerateBuildParticipant extends MojoExecutionBuildParticipant
                                             maven, buildContext,
                                             "schemaDirectory",
                                             "schemaIncludes",
-                                            "schemaIncludes"));
+                                            "schemaExcludes"));
 
         if (!filesModified)
         {
