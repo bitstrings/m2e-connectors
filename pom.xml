@@ -43,19 +43,6 @@
         <url>scm:git:git@github.com:bitstrings/m2e-connectors.git</url>
     </scm>
 
-    <repositories>
-        <repository>
-            <id>m2e</id>
-            <layout>p2</layout>
-            <url>https://repository.sonatype.org/content/repositories/forge-sites/m2e/1.1.0/N/LATEST</url>
-        </repository>
-        <repository>
-            <id>indigo</id>
-            <layout>p2</layout>
-            <url>http://download.eclipse.org/releases/indigo</url>
-        </repository>
-    </repositories>
-
     <modules>
         <module>dependencypath-m2e-connector</module>
         <module>jaxb2-m2e-connector</module>
