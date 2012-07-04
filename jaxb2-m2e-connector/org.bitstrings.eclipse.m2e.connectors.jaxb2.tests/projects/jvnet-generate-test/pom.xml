@@ -92,6 +92,12 @@
                 <maven-jaxb2-plugin.version>0.8.0</maven-jaxb2-plugin.version>
             </properties>
         </profile>
+        <profile>
+            <id>jaxb2-version-0.8.1</id>
+            <properties>
+                <maven-jaxb2-plugin.version>0.8.1</maven-jaxb2-plugin.version>
+            </properties>
+        </profile>
     </profiles>
 
 </project>
