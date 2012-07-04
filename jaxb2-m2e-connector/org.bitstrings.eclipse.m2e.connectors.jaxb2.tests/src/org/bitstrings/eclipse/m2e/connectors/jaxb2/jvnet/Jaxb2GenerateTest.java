@@ -38,6 +38,11 @@ public class Jaxb2GenerateTest extends AbstractMavenProjectTestCase
         commonGenerateTest("jaxb2-plugin, jaxb2-version-0.8.0");
     }
 
+    public void testGenerateVersion081() throws Exception
+    {
+        commonGenerateTest("jaxb2-plugin, jaxb2-version-0.8.1");
+    }
+
     public void testGenerate0Version075() throws Exception
     {
         commonGenerateTest("jaxb20-plugin, jaxb2-version-0.7.5");
@@ -46,6 +51,11 @@ public class Jaxb2GenerateTest extends AbstractMavenProjectTestCase
     public void testGenerate0Version080() throws Exception
     {
         commonGenerateTest("jaxb20-plugin, jaxb2-version-0.8.0");
+    }
+
+    public void testGenerate0Version081() throws Exception
+    {
+        commonGenerateTest("jaxb20-plugin, jaxb2-version-0.8.1");
     }
 
     public void testGenerate1Version075() throws Exception
@@ -58,6 +68,11 @@ public class Jaxb2GenerateTest extends AbstractMavenProjectTestCase
         commonGenerateTest("jaxb21-plugin, jaxb2-version-0.8.0");
     }
 
+    public void testGenerate1Version081() throws Exception
+    {
+        commonGenerateTest("jaxb21-plugin, jaxb2-version-0.8.1");
+    }
+
     public void testGenerate2Version075() throws Exception
     {
         commonGenerateTest("jaxb22-plugin, jaxb2-version-0.7.5");
@@ -68,12 +83,17 @@ public class Jaxb2GenerateTest extends AbstractMavenProjectTestCase
         commonGenerateTest("jaxb22-plugin, jaxb2-version-0.8.0");
     }
 
+    public void testGenerate2Version081() throws Exception
+    {
+        commonGenerateTest("jaxb22-plugin, jaxb2-version-0.8.1");
+    }
+
     protected void commonGenerateTest(String profiles) throws Exception
     {
         ResolverConfiguration configuration = new ResolverConfiguration();
         if (profiles != null)
         {
-            configuration.setActiveProfiles(profiles);
+            configuration.setSelectedProfiles(profiles);
         }
         IProject project = importProject("projects/jvnet-generate-test/pom.xml", configuration);
         waitForJobsToComplete();
