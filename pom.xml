@@ -15,9 +15,9 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>org.bitstrings.eclipse.m2e</groupId>
-        <artifactId>m2e-parent</artifactId>
-        <version>2.0.0-SNAPSHOT</version>
+        <groupId>org.sonatype.oss</groupId>
+        <artifactId>oss-parent</artifactId>
+        <version>7</version>
     </parent>
 
     <groupId>org.bitstrings.eclipse.m2e.connectors</groupId>
@@ -28,6 +28,18 @@
 
     <packaging>pom</packaging>
 
+    <licenses>
+        <license>
+            <name>EPL-1.0</name>
+            <url>http://www.eclipse.org/legal/epl-v10.html</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <organization>
+        <name>bitstrings.org</name>
+    </organization>
+
     <developers>
         <developer>
             <id>p</id>
@@ -37,11 +49,30 @@
         </developer>
     </developers>
 
+    <repositories>
+        <repository>
+            <id>m2e</id>
+            <layout>p2</layout>
+            <url>http://download.eclipse.org/technology/m2e/releases/1.1</url>
+        </repository>
+        <repository>
+            <id>indigo</id>
+            <layout>p2</layout>
+            <url>http://download.eclipse.org/releases/indigo</url>
+        </repository>
+    </repositories>
+
     <scm>
         <connection>scm:git:git@github.com:bitstrings/m2e-connectors.git</connection>
         <developerConnection>scm:git:git@github.com:bitstrings/m2e-connectors.git</developerConnection>
         <url>scm:git:git@github.com:bitstrings/m2e-connectors.git</url>
     </scm>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <tycho.version>0.15.0</tycho.version>
+    </properties>
 
     <modules>
         <module>dependencypath-m2e-connector</module>
@@ -49,5 +80,168 @@
         <module>xmlbeans-m2e-connector</module>
         <module>eclipse-repository</module>
     </modules>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.eclipse.tycho</groupId>
+                    <artifactId>tycho-compiler-plugin</artifactId>
+                    <version>${tycho.version}</version>
+                    <configuration>
+                        <source>1.5</source>
+                        <target>1.5</target>
+                        <optimize>true</optimize>
+                        <showWarnings>true</showWarnings>
+                    </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>org.eclipse.tycho</groupId>
+                    <artifactId>tycho-surefire-plugin</artifactId>
+                    <version>${tycho.version}</version>
+                    <configuration>
+                        <useUIHarness>false</useUIHarness>
+                        <argLine>${tycho.test.jvmArgs}</argLine>
+                        <appArgLine>-pluginCustomization ${basedir}/plugin_customization.ini</appArgLine>
+                        <forkedProcessTimeoutInSeconds>7200</forkedProcessTimeoutInSeconds>
+                    </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>org.eclipse.tycho</groupId>
+                    <artifactId>maven-osgi-lifecycle-plugin</artifactId>
+                    <version>${tycho.version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.eclipse.tycho</groupId>
+                    <artifactId>tycho-packaging-plugin</artifactId>
+                    <version>${tycho.version}</version>
+                    <configuration>
+                        <!-- workaround for TYCHO-349 or TYCHO-313 -->
+                        <strictVersions>false</strictVersions>
+                    </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>org.eclipse.tycho</groupId>
+                    <artifactId>target-platform-configuration</artifactId>
+                    <version>${tycho.version}</version>
+                    <configuration>
+                        <resolver>p2</resolver>
+                        <ignoreTychoRepositories>true</ignoreTychoRepositories>
+                        <pomDependencies>consider</pomDependencies>
+                        <environments>
+                            <environment>
+                                <os>linux</os>
+                                <ws>gtk</ws>
+                                <arch>x86</arch>
+                            </environment>
+                            <environment>
+                                <os>linux</os>
+                                <ws>gtk</ws>
+                                <arch>x86_64</arch>
+                            </environment>
+                            <environment>
+                                <os>win32</os>
+                                <ws>win32</ws>
+                                <arch>x86</arch>
+                            </environment>
+                            <environment>
+                                <os>win32</os>
+                                <ws>win32</ws>
+                                <arch>x86_64</arch>
+                            </environment>
+                            <environment>
+                                <os>macosx</os>
+                                <ws>cocoa</ws>
+                                <arch>x86_64</arch>
+                            </environment>
+                        </environments>
+                    </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-resources-plugin</artifactId>
+                    <version>2.6</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>2.5.1</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-enforcer-plugin</artifactId>
+                    <version>1.1.1</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-enforcer-plugin</artifactId>
+                <configuration>
+                    <rules>
+                        <requireMavenVersion>
+                            <version>3.0.0</version>
+                        </requireMavenVersion>
+                        <requireJavaVersion>
+                            <version>1.5</version>
+                        </requireJavaVersion>
+                    </rules>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.eclipse.tycho</groupId>
+                <artifactId>tycho-maven-plugin</artifactId>
+                <version>${tycho.version}</version>
+                <extensions>true</extensions>
+            </plugin>
+        </plugins>
+    </build>
+
+    <profiles>
+        <profile>
+            <id>sun-jvm</id>
+            <activation>
+                <property>
+                    <name>java.vendor.url</name>
+                    <value>http://java.sun.com/</value>
+                </property>
+            </activation>
+            <properties>
+                <tycho.test.jvmArgs>-Xmx512m -XX:MaxPermSize=256m</tycho.test.jvmArgs>
+            </properties>
+        </profile>
+        <profile>
+            <id>osx</id>
+            <activation>
+                <property>
+                    <name>java.vendor.url</name>
+                    <value>http://www.apple.com/</value>
+                </property>
+            </activation>
+            <properties>
+                <tycho.test.jvmArgs>-Xmx512m -XX:MaxPermSize=256m -XstartOnFirstThread</tycho.test.jvmArgs>
+            </properties>
+            <build>
+                <pluginManagement>
+                    <plugins>
+                        <plugin>
+                            <groupId>org.eclipse.tycho</groupId>
+                            <artifactId>tycho-surefire-plugin</artifactId>
+                            <configuration>
+                                <dependencies>
+                                    <dependency>
+                                        <artifactId>org.eclipse.jdt.launching.macosx</artifactId>
+                                        <version>3.2.100</version>
+                                        <type>eclipse-plugin</type>
+                                    </dependency>
+                                </dependencies>
+                            </configuration>
+                        </plugin>
+                    </plugins>
+                </pluginManagement>
+            </build>
+        </profile>
+    </profiles>
 
 </project>
