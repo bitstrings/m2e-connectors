@@ -26,4 +26,13 @@
 
     <name>m2e :: Connectors :: JAXB2 :: Tests</name>
 
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.eclipse.tycho</groupId>
+                <artifactId>target-platform-configuration</artifactId>
+           </plugin>
+        </plugins>
+    </build>
+
 </project>
