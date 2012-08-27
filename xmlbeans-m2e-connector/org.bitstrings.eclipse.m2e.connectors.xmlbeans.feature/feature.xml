@@ -13,7 +13,7 @@
 <feature
       id="org.bitstrings.eclipse.m2e.connectors.xmlbeans.features"
       label="m2e connector for xmlbeans"
-      version="2.0.0.qualifier"
+      version="3.0.0.qualifier"
       provider-name="bitstrings.org">
 
    <description url="">

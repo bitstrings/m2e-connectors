@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: m2e connector for jaxb2
 Bundle-SymbolicName: org.bitstrings.eclipse.m2e.connectors.jaxb2;singleton:=true
-Bundle-Version: 2.0.0.qualifier
+Bundle-Version: 3.0.0.qualifier
 Bundle-Vendor: bitstrings.org
 Bundle-RequiredExecutionEnvironment: J2SE-1.5,
  JavaSE-1.6
