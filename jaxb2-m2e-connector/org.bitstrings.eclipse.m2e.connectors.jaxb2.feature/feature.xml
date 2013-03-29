@@ -11,7 +11,7 @@
 
  -->
 <feature
-      id="org.bitstrings.eclipse.m2e.connectors.jaxb2.features"
+      id="org.bitstrings.eclipse.m2e.connectors.jaxb2.feature"
       label="m2e connector for jaxb2"
       version="3.0.0.qualifier"
       provider-name="bitstrings.org">

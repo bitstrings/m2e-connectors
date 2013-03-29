@@ -20,7 +20,7 @@
         <version>3.0.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>org.bitstrings.eclipse.m2e.connectors.xmlbeans.features</artifactId>
+    <artifactId>org.bitstrings.eclipse.m2e.connectors.xmlbeans.feature</artifactId>
 
     <packaging>eclipse-feature</packaging>
 
