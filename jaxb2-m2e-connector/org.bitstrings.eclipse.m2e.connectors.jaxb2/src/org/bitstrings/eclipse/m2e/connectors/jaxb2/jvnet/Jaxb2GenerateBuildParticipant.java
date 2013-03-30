@@ -13,10 +13,8 @@ package org.bitstrings.eclipse.m2e.connectors.jaxb2.jvnet;
 import java.io.File;
 import java.util.Set;
 
-import org.apache.commons.lang.ArrayUtils;
 import org.apache.maven.execution.MavenSession;
 import org.apache.maven.plugin.MojoExecution;
-import org.bitstrings.eclipse.m2e.common.BuildHelper;
 import org.eclipse.core.resources.IProject;
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.m2e.core.MavenPlugin;
@@ -38,32 +36,6 @@ public class Jaxb2GenerateBuildParticipant extends MojoExecutionBuildParticipant
         final BuildContext buildContext = getBuildContext();
         final MavenSession mavenSession = getSession();
         final MojoExecution mojoExecution = getMojoExecution();
-
-        boolean filesModified =
-                    !ArrayUtils.isEmpty(
-                            BuildHelper.getModifiedFiles(
-                                            mavenSession, mojoExecution,
-                                            maven, buildContext,
-                                            "schemaDirectory",
-                                            "schemaIncludes",
-                                            "schemaExcludes"));
-
-        if (!filesModified)
-        {
-            filesModified =
-                !ArrayUtils.isEmpty(
-                            BuildHelper.getModifiedFiles(
-                                            mavenSession, mojoExecution,
-                                            maven, buildContext,
-                                            "bindingDirectory",
-                                            "bindingIncludes",
-                                            "bindingExcludes"));
-        }
-
-        if (!filesModified)
-        {
-            return null;
-        }
 
         final Set<IProject> result = super.build(kind, monitor);
 
