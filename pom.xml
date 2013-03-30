@@ -52,6 +52,7 @@
     </repositories>
 
     <modules>
+        <module>generic-m2e-connector</module>
         <module>dependencypath-m2e-connector</module>
         <module>jaxb2-m2e-connector</module>
         <module>xmlbeans-m2e-connector</module>
