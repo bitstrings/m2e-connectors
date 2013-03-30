@@ -17,12 +17,12 @@
     <parent>
         <groupId>org.bitstrings.eclipse.m2e</groupId>
         <artifactId>m2e-parent</artifactId>
-        <version>4-SNAPSHOT</version>
+        <version>4</version>
     </parent>
 
     <groupId>org.bitstrings.eclipse.m2e.connectors</groupId>
     <artifactId>m2e-connectors-parent</artifactId>
-    <version>3.0.0-SNAPSHOT</version>
+    <version>3.0.0.20130330-0126</version>
 
     <name>m2e :: Connectors :: Parent</name>
 
