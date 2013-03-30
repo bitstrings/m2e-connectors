@@ -8,7 +8,7 @@
             <pluginExecutionFilter>
                 <groupId>org.jvnet.jaxb2.maven2</groupId>
                 <artifactId>maven-jaxb2-plugin</artifactId>
-                <versionRange>[0.7.3,0.8.2)</versionRange>
+                <versionRange>[0.7.3,0.8.1)</versionRange>
                 <goals>
                     <goal>generate</goal>
                 </goals>
@@ -23,7 +23,7 @@
             <pluginExecutionFilter>
                 <groupId>org.jvnet.jaxb2.maven2</groupId>
                 <artifactId>maven-jaxb20-plugin</artifactId>
-                <versionRange>[0.7.5,0.8.2)</versionRange>
+                <versionRange>[0.7.5,0.8.1)</versionRange>
                 <goals>
                     <goal>generate</goal>
                 </goals>
@@ -38,7 +38,7 @@
             <pluginExecutionFilter>
                 <groupId>org.jvnet.jaxb2.maven2</groupId>
                 <artifactId>maven-jaxb21-plugin</artifactId>
-                <versionRange>[0.7.5,0.8.2)</versionRange>
+                <versionRange>[0.7.5,0.8.1)</versionRange>
                 <goals>
                     <goal>generate</goal>
                 </goals>
@@ -53,7 +53,7 @@
             <pluginExecutionFilter>
                 <groupId>org.jvnet.jaxb2.maven2</groupId>
                 <artifactId>maven-jaxb22-plugin</artifactId>
-                <versionRange>[0.7.5,0.8.2)</versionRange>
+                <versionRange>[0.7.5,0.8.1)</versionRange>
                 <goals>
                     <goal>generate</goal>
                 </goals>
