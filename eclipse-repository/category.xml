@@ -17,23 +17,23 @@
     </description>
 
     <feature
-            url="features/org.bitstrings.eclipse.m2e.connectors.dependencypath_3.0.0.qualifier.jar"
+            url="features/org.bitstrings.eclipse.m2e.connectors.dependencypath_4.0.0.qualifier.jar"
             id="org.bitstrings.eclipse.m2e.connectors.dependencypath.feature"
-            version="3.0.0.qualifier">
+            version="4.0.0.qualifier">
         <category name="org.bitstrings.eclipse.m2e.connectors"/>
     </feature>
 
     <feature
-            url="features/org.bitstrings.eclipse.m2e.connectors.jaxb2_3.0.0.qualifier.jar"
+            url="features/org.bitstrings.eclipse.m2e.connectors.jaxb2_4.0.0.qualifier.jar"
             id="org.bitstrings.eclipse.m2e.connectors.jaxb2.feature"
-            version="3.0.0.qualifier">
+            version="4.0.0.qualifier">
         <category name="org.bitstrings.eclipse.m2e.connectors"/>
     </feature>
 
     <feature
-            url="features/org.bitstrings.eclipse.m2e.connectors.xmlbeans_3.0.0.qualifier.jar"
+            url="features/org.bitstrings.eclipse.m2e.connectors.xmlbeans_4.0.0.qualifier.jar"
             id="org.bitstrings.eclipse.m2e.connectors.xmlbeans.feature"
-            version="3.0.0.qualifier">
+            version="4.0.0.qualifier">
         <category name="org.bitstrings.eclipse.m2e.connectors"/>
     </feature>
 

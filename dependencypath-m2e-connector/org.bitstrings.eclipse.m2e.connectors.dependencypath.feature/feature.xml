@@ -13,7 +13,7 @@
 <feature
       id="org.bitstrings.eclipse.m2e.connectors.dependencypath.feature"
       label="m2e connector for dependencypath"
-      version="3.0.0.qualifier"
+      version="4.0.0.qualifier"
       provider-name="bitstrings.org">
 
    <description url="">
